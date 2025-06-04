@@ -6,7 +6,7 @@
 - story for the paragraph that outputs the final story
 */
 
-let customName = 'Bob';
+let customName = document.querySelector('input');
 let randomize = document.querySelector('button');
 let story = document.createElement('p');
 document.body.appendChild(story);
@@ -49,7 +49,6 @@ function result() {
 	newStory = newStory.replace(':inserty:',yItem);
 	newStory = newStory.replace(':insertz:',zItem);
 	newStory = newStory.replace(':insertx:',xItem);
-	console.log(newStory);
 
 	/* STEP 10: If the user has typed a name in the customName field, replace the name 'Bob' in the story with whatever they typed */
 	if(customName.value != '') {
@@ -64,9 +63,10 @@ function result() {
 
 		// STEP 12a: Create a variable called temp and convert °F to °C ... the formula for conversion is °C = (°F - 32) x 5/9
 		var temp = (94 - 32) * 5/9;
+		console.log(temp);
 
 		// STEP 12b: Replace the string '94 fahrenheit' with the updated temperature in °C
-		newStory = newStory.replace('94 fahrenheit', temp + ' celcius');
+		newStory = newStory.replace('94 farenheit', temp+' celcius');
 
   }
 	/* STEP 13: Make the textContent property of the story variable (which references the paragraph) equal to newStory */
